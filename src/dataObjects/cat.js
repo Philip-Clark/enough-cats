@@ -11,8 +11,8 @@ export default function catObject() {
     name = _name;
   };
 
-  const setPosition = (_position) => {
-    position.setPosition(_position);
+  const setPosition = (x, y) => {
+    position = Position(x, y);
   };
 
   const setMovementArea = ({ min, max }) => {
@@ -23,6 +23,7 @@ export default function catObject() {
 
   const requestNewState = () => {
     state = catState();
+    return state;
   };
 
   const getState = () => {
@@ -41,7 +42,7 @@ export default function catObject() {
     return name;
   };
 
-  return [
+  return {
     setName,
     setPosition,
     setMovementArea,
@@ -50,5 +51,5 @@ export default function catObject() {
     getMovementArea,
     getPosition,
     getName,
-  ];
+  };
 }

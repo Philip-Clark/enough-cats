@@ -10,5 +10,5 @@ export default function Position(init_x = 0, init_y = 0) {
     return { x, y };
   };
 
-  return [getPosition, setPosition];
+  return { getPosition, setPosition };
 }
